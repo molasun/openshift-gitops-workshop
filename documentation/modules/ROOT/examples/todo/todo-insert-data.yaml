@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: todo-insert
   annotations:
-    argocd.argoproj.io/hook: PostSync # <1>
+    argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
@@ -18,7 +18,7 @@ spec:
               "POST",
               "todo-gitops:8080/api",
               "title=Finish ArgoCD tutorial",
-              "--ignore-stdin"
+              "--ignore-stdin",
             ]
       restartPolicy: Never
   backoffLimit: 1
