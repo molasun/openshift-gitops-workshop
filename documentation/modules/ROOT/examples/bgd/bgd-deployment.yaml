@@ -17,19 +17,20 @@ spec:
         app: bgd
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bgd
-        env:
-        - name: COLOR
-          value: "blue"
-        resources: {}
-        securityContext:
-          allowPrivilegeEscalation: false
-          capabilities:
-            drop:
-            - ALL
+        - image: quay.io/rhdevelopers/bgd:1.0.0
+          name: bgd
+          env:
+            - name: COLOR
+              value: "white"
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
       securityContext:
         runAsNonRoot: true
         seccompProfile:
           type: RuntimeDefault
 ---
+
