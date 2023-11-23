@@ -6,4 +6,4 @@ namePrefix: test-
 commonLabels:
   env: test
 patches:
-  - cpu-count.yaml
+  - path: cpu-count.yaml
