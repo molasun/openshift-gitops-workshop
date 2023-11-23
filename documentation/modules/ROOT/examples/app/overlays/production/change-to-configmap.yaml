@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bgd
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: bgd
+          env:
+            - name: COLOR_CONFIG
+              valueFrom:
+                configMapKeyRef:
+                  name: color-config
+                  key: color.prod
+          resources:
+            limits:
+              cpu: 3000m
