@@ -10,12 +10,12 @@ spec:
         - name: bgd
           env:
             - name: COLOR
-              value:
-            - name: COLOR
+              value: "green"
+            - name: SOME_CONFIG
               valueFrom:
                 configMapKeyRef:
-                  name: color-config
-                  key: color.prod
+                  name: some-config
+                  key: config.prod
           resources:
             limits:
               cpu: 3000m

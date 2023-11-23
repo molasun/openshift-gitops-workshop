@@ -2,11 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../../bgd-base
+  - pbd.yaml
 commonLabels:
   env: production
 patches:
-  - path: change-to-configmap.yaml
+  - path: use-configmap.yaml
 configMapGenerator:
-  - name: color-config
+  - name: some-config
     literals:
-      - color.prod=GREEN
+      - config.prod="This is Production App"
