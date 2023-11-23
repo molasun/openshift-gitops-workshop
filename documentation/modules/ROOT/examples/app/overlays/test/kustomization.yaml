@@ -5,5 +5,5 @@ resources:
 namePrefix: test-
 commonLabels:
   env: test
-patchesStrategicMerge:
-  - cpu_count.yaml
+patches:
+  - cpu-count.yaml

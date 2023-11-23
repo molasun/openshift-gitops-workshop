@@ -9,7 +9,7 @@ spec:
         - name: bgd
           env:
             - name: COLOR
-              value: "blue"
+              value: "white"
           resources:
             limits:
               cpu: 2000m
