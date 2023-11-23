@@ -13,15 +13,15 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: bgd
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bgd
-        env:
-        - name: COLOR
-          value: "blue"
-        resources: {}
+        - image: quay.io/rhdevelopers/bgd:1.0.0
+          name: bgd
+          env:
+            - name: COLOR
+              value: "blue"
+          resources: {}
 ---
+
