@@ -7,6 +7,9 @@ spec:
     spec:
       containers:
         - name: bgd
+          env:
+            - name: COLOR
+              value: "blue"
           resources:
             limits:
               cpu: 2000m
