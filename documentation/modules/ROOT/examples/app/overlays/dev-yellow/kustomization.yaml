@@ -8,4 +8,7 @@ patches:
         path: /spec/template/spec/containers/0/env/0/value
         value: yellow
     target:
-      labelSelector: app=bgd
+      group: apps
+      kind: Deployment
+      name: bgd
+      version: v1
