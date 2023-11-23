@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../bgd-base
   - pdb.yaml
+  - configmap.yaml
 commonLabels:
   env: production
 patches:

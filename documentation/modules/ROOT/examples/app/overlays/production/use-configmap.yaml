@@ -16,6 +16,11 @@ spec:
                 configMapKeyRef:
                   name: some-config
                   key: config.prod
+            - name: DATE_CONFIG
+              valueFrom:
+                configMapKeyRef:
+                  name: date-config
+                  key: date
           resources:
             limits:
               cpu: 3000m
