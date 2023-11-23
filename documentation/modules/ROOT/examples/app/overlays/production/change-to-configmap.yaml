@@ -9,7 +9,7 @@ spec:
       containers:
         - name: bgd
           env:
-            - name: COLOR_CONFIG
+            - name: COLOR
               valueFrom:
                 configMapKeyRef:
                   name: color-config
